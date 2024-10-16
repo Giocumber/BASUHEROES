@@ -1,30 +1,41 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.InputSystem;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
     Rigidbody2D rb;
-    public float movementSpeed = 5f;
-    private Vector2 movement;
+    private Vector2 movementInput;
 
-    public string InputNameHorizontal;
-    public string InputNameVertical;
+    public float movementSpeed = 5f;
+    public bool canMove;
+
+    private PlayerFlip playerFlip;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        playerFlip = GetComponent<PlayerFlip>();
+        canMove = true;
     }
 
-    void Update()
+    public void SetInput(Vector2 direction)
     {
-        movement.x = Input.GetAxisRaw(InputNameHorizontal);
-        movement.y = Input.GetAxisRaw(InputNameVertical);
-        movement = movement.normalized;
+        if (canMove)
+            movementInput = direction.normalized;
+
     }
 
     private void FixedUpdate()
     {
-        rb.velocity = movement * movementSpeed;
+        MovePlayer(movementInput);
+    }
+
+
+    private void MovePlayer(Vector2 movementInput)
+    {
+        rb.velocity = movementInput * movementSpeed;
+        playerFlip.Flip(movementInput);
     }
 }

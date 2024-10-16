@@ -4,8 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Grabbable
-  - Station
+  - Trash
   layers:
   - Default
   - TransparentFX
