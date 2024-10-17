@@ -11,7 +11,7 @@ public class PlayerPickUpAndToss : MonoBehaviour
     public string[] canCarryObjectTags; // Tags of objects the player can carry (editable in Inspector)
     public float tossForce = 5f; // Force applied when tossing
 
-    private string getObjectLayer; // Force applied when tossing
+    private string getObjectLayer;
 
     private void Start()
     {
@@ -52,7 +52,7 @@ public class PlayerPickUpAndToss : MonoBehaviour
         }
     }
 
-    public void Toss()
+    public void Toss() //Get the child object of carryObjectPosition. This is the object to toss
     {
         if (carryObjectPosition.childCount > 0)
         {
@@ -60,14 +60,13 @@ public class PlayerPickUpAndToss : MonoBehaviour
             objectToToss.SetParent(null); // Unparent the object so it no longer moves with the player
 
             Rigidbody2D objectRb = objectToToss.GetComponent<Rigidbody2D>();
-            objectRb.constraints = RigidbodyConstraints2D.FreezeRotation;
+            objectRb.constraints = RigidbodyConstraints2D.FreezeRotation; // Unfreeze all except rotation
 
             Vector2 throwDirection = new Vector2(transform.localScale.x, 0).normalized; // Adjust direction based on player facing
 
-            
             objectRb.isKinematic = false; // Set to dynamic for physics to take effect
             objectRb.AddForce(throwDirection * tossForce, ForceMode2D.Impulse); // Toss the object with force
-            objectToPickUp.layer = LayerMask.NameToLayer(getObjectLayer);
+            objectToToss.gameObject.layer = LayerMask.NameToLayer(getObjectLayer);
 
             // Simulate gravity after tossing
             StartCoroutine(SimulateGravity(objectRb));
@@ -79,11 +78,14 @@ public class PlayerPickUpAndToss : MonoBehaviour
         objectRb.gravityScale = 2f;
         yield return new WaitForSeconds(0.5f);
 
-        objectRb.gravityScale = 0f;
+        if (objectRb != null)
+        {
+            objectRb.gravityScale = 0f;
 
-        //Stops the object from moving
-        objectRb.velocity = Vector2.zero;
-        objectRb.position = new Vector2(objectRb.position.x, objectRb.position.y);
+            //Stops the object from moving
+            objectRb.velocity = Vector2.zero;
+            objectRb.position = new Vector2(objectRb.position.x, objectRb.position.y);
+        }
     }
 
     private void OnTriggerStay2D(Collider2D other)

@@ -9,7 +9,7 @@ public class UnpackingStationScript : MonoBehaviour
     public float unpackTimerComplete = 3f;
 
     public int trashToRelease; // Number of trash objects to release
-    private Transform trashSpawnPoint; 
+    private GameObject trashSpawnPoint; 
     public GameObject[] trashPrefab; // The trash prefab to instantiate
 
     private bool playerInTrigger = false;
@@ -19,7 +19,7 @@ public class UnpackingStationScript : MonoBehaviour
     private void Start()
     {
         trashObject = null;
-        trashSpawnPoint = transform.Find("TrashSpawnPoint");
+        trashSpawnPoint = GameObject.Find("SortingHub");
     }
 
     private void OnTriggerStay2D(Collider2D other)
@@ -36,11 +36,9 @@ public class UnpackingStationScript : MonoBehaviour
         if (playerInTrigger && trashInTrigger)
         {
             unpackTimer += Time.deltaTime; // Increase the timer
-            Debug.Log("Player and Trash are in trigger area");
 
             if (unpackTimer >= unpackTimerComplete)
             {
-                Debug.Log("Unpacking trash now");
                 UnpackTrash(trashObject);
                 unpackTimer = 0f; // Reset the timer after unpacking
             }
@@ -80,7 +78,7 @@ public class UnpackingStationScript : MonoBehaviour
         for (int i = 0; i < numOfTrash; i++)
         {
             int randomTrash = Random.Range(0, trashPrefab.Length);
-            Instantiate(trashPrefab[randomTrash], trashSpawnPoint.position, trashSpawnPoint.rotation);
+            Instantiate(trashPrefab[randomTrash], trashSpawnPoint.transform.position, trashSpawnPoint.transform.rotation);
         }
     }
 }
