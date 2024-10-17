@@ -17,6 +17,7 @@ public class PlayerToss : MonoBehaviour
     {
         if (carryObjectPosition.childCount > 0)
         {
+            Debug.Log("daklag");
             Transform objectToToss = carryObjectPosition.GetChild(0); 
             objectToToss.SetParent(null); //set the parent to null
 
