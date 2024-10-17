@@ -14,15 +14,7 @@
                     "interactions": ""
                 },
                 {
-                    "name": "P1_Toss",
-                    "type": "Button",
-                    "id": "af27867b-0f7e-4851-86ab-8560ee06da3d",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
-                    "name": "P1_PickUp",
+                    "name": "P1_PickUpAndToss",
                     "type": "Button",
                     "id": "1ad2e2c9-1bab-48ca-8bb7-cdc9d893feb0",
                     "expectedControlType": "Button",
@@ -38,17 +30,9 @@
                     "interactions": ""
                 },
                 {
-                    "name": "P2_PickUp",
+                    "name": "P2_PickUpAndToss",
                     "type": "Button",
                     "id": "758b2c46-f9f7-4c42-ae6f-60a71e2d6396",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
-                    "name": "P2_Toss",
-                    "type": "Button",
-                    "id": "53172996-99fb-4f38-8858-e89b27ba115d",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -167,45 +151,23 @@
                 },
                 {
                     "name": "",
-                    "id": "c5a727c6-a6c9-4ecf-947b-ef5f60e65981",
-                    "path": "<Keyboard>/y",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "P1_PickUp",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "b869b698-34ce-48e9-aa98-9adbba7388cb",
                     "path": "<Keyboard>/comma",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "P2_PickUp",
+                    "action": "P2_PickUpAndToss",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "4fc835c9-480f-4730-a986-d33dc5b27be2",
-                    "path": "<Keyboard>/t",
+                    "id": "c5a727c6-a6c9-4ecf-947b-ef5f60e65981",
+                    "path": "<Keyboard>/y",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "P1_Toss",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "7ac4971e-706e-4ee8-8a42-718d7e3af01e",
-                    "path": "<Keyboard>/period",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "P2_Toss",
+                    "action": "P1_PickUpAndToss",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

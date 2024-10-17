@@ -242,7 +242,7 @@ GameObject:
   m_Component:
   - component: {fileID: 244496126}
   - component: {fileID: 244496127}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -425,13 +425,13 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 535150505}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_LinearDrag: 10
+  m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -573,7 +573,8 @@ GameObject:
   - component: {fileID: 631644380}
   - component: {fileID: 631644386}
   - component: {fileID: 631644387}
-  m_Layer: 0
+  - component: {fileID: 631644388}
+  m_Layer: 6
   m_Name: Player2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -727,8 +728,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   move: {fileID: -2288229428067238916, guid: b7141c005621e134ea24c1b780f541f6, type: 3}
-  pickUp: {fileID: -4404190382649769927, guid: b7141c005621e134ea24c1b780f541f6, type: 3}
-  toss: {fileID: 2860584513865837813, guid: b7141c005621e134ea24c1b780f541f6, type: 3}
+  pickUpOrToss: {fileID: -4404190382649769927, guid: b7141c005621e134ea24c1b780f541f6, type: 3}
 --- !u!114 &631644385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -748,7 +748,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 631644377}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ce1fd2f160ae7ef4fa05b7b933a4f8bb, type: 3}
   m_Name: 
@@ -762,11 +762,26 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 631644377}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 925804a0d2c32d44689eaf43c8981395, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tossForce: 50
+--- !u!114 &631644388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631644377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a330a76270010b4d9ab6a0ad3622a3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canCarryObjectTags:
+  - Trash
   tossForce: 50
 --- !u!1 &854290327
 GameObject:
@@ -777,7 +792,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 854290328}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CarryPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -816,7 +831,8 @@ GameObject:
   - component: {fileID: 1026874628}
   - component: {fileID: 1026874633}
   - component: {fileID: 1026874635}
-  m_Layer: 0
+  - component: {fileID: 1026874636}
+  m_Layer: 6
   m_Name: Player1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -970,8 +986,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   move: {fileID: -6594997973905425872, guid: b7141c005621e134ea24c1b780f541f6, type: 3}
-  pickUp: {fileID: -2158638748579105947, guid: b7141c005621e134ea24c1b780f541f6, type: 3}
-  toss: {fileID: -5421752199367398786, guid: b7141c005621e134ea24c1b780f541f6, type: 3}
+  pickUpOrToss: {fileID: -2158638748579105947, guid: b7141c005621e134ea24c1b780f541f6, type: 3}
 --- !u!114 &1026874633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -979,7 +994,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1026874625}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ce1fd2f160ae7ef4fa05b7b933a4f8bb, type: 3}
   m_Name: 
@@ -1005,12 +1020,27 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1026874625}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 925804a0d2c32d44689eaf43c8981395, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tossForce: 20
+--- !u!114 &1026874636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1026874625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a330a76270010b4d9ab6a0ad3622a3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canCarryObjectTags:
+  - Trash
+  tossForce: 50
 --- !u!1 &1044751077
 GameObject:
   m_ObjectHideFlags: 0
@@ -1021,7 +1051,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1044751078}
   - component: {fileID: 1044751079}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Eyes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1102,7 +1132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1085472458}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CarryPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1133,7 +1163,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1192948683}
   - component: {fileID: 1192948684}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Eyes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1333,7 +1363,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1286117059}
   - component: {fileID: 1286117060}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1540,7 +1570,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1566787365
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1645,7 +1675,7 @@ GameObject:
   - component: {fileID: 2076934424}
   - component: {fileID: 2076934421}
   - component: {fileID: 2076934422}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Trash
   m_TagString: Trash
   m_Icon: {fileID: 0}
@@ -1686,13 +1716,13 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2076934420}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_LinearDrag: 10
+  m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0

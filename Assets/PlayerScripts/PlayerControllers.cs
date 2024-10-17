@@ -8,21 +8,18 @@ public class PlayerControllers : MonoBehaviour
     private Vector2 moveDirection;
 
     public InputActionReference move;
-    public InputActionReference pickUp;
-    public InputActionReference toss;
+    public InputActionReference pickUpOrToss; // Single action for both pickup and toss
 
     private PlayerMovement playerMovement;
-    private PlayerPickUp playerPickUpScript;
-    private PlayerToss playerTossScript;
+    private PlayerPickUpAndToss playerPickUpAndTossScript;
 
     void Start()
     {
         playerMovement = GetComponent<PlayerMovement>();
-        playerPickUpScript = GetComponent<PlayerPickUp>();
-        playerTossScript = GetComponent<PlayerToss>();
+        playerPickUpAndTossScript = GetComponent<PlayerPickUpAndToss>();
 
-        pickUp.action.performed += ctx => playerPickUpScript.PickUp();
-        toss.action.performed += ctx => playerTossScript.Toss();
+        // Assign the single button to handle both pick up and toss functionality
+        pickUpOrToss.action.performed += ctx => playerPickUpAndTossScript.PickUpOrToss(ctx);
     }
 
     void FixedUpdate()
@@ -33,22 +30,15 @@ public class PlayerControllers : MonoBehaviour
         playerMovement.SetInput(movementInput);
     }
 
-    void Update()
-    {
-        
-    }
-
     void OnEnable()
     {
         move.action.Enable();
-        pickUp.action.Enable();
-        toss.action.Enable();
+        pickUpOrToss.action.Enable(); // Enable pickUpOrToss action
     }
 
     void OnDisable()
     {
         move.action.Disable();
-        pickUp.action.Disable();
-        toss.action.Disable();
+        pickUpOrToss.action.Disable(); // Disable pickUpOrToss action
     }
 }
