@@ -9,17 +9,23 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 movementInput;
 
     public float movementSpeed = 5f;
+    public float boostSpeed;
+
+    private float originalSpeed;
     public bool canMove;
     public float minX, maxX, minY, maxY; // Define boundaries for X and Y axes
 
     private PlayerFlip playerFlip;
 
+    public bool isBoosting;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         playerFlip = GetComponent<PlayerFlip>();
         canMove = true;
+        isBoosting = false;
+        originalSpeed = movementSpeed;
     }
 
     public void SetInput(Vector2 direction)
@@ -27,6 +33,20 @@ public class PlayerMovement : MonoBehaviour
         if (canMove)
             movementInput = direction.normalized;
 
+    }
+
+    private void Update()
+    {
+        if (isBoosting)
+            movementSpeed = boostSpeed;
+        else
+            movementSpeed = originalSpeed;
+    }
+
+    public IEnumerator ResetMovementSpeed(float boostPowerDuration)
+    {
+        yield return new WaitForSeconds(boostPowerDuration);
+        isBoosting = false;
     }
 
     private void FixedUpdate()

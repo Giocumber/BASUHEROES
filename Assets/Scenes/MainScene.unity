@@ -381,6 +381,55 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.7, y: 0.7}
   m_EdgeRadius: 0
+--- !u!1 &198249338
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 198249340}
+  - component: {fileID: 198249339}
+  m_Layer: 0
+  m_Name: PowerUpManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &198249339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 198249338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f8db66441d0e92498b2d189241c31f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minX: -17
+  maxX: 17
+  minY: -10.5
+  maxY: 10.5
+  boostAppearanceTimer: 10
+  powerUpPrefab: {fileID: 6953668877852277491, guid: 6b8e2ad90abec3d44b80ffc2fe76e7e0, type: 3}
+--- !u!4 &198249340
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 198249338}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.06546152, y: -0.021685146, z: -6.5950966}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &222976362
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1156,8 +1205,8 @@ GameObject:
   - component: {fileID: 631644382}
   - component: {fileID: 631644378}
   - component: {fileID: 631644383}
-  - component: {fileID: 631644384}
   - component: {fileID: 631644385}
+  - component: {fileID: 631644384}
   - component: {fileID: 631644380}
   - component: {fileID: 631644388}
   m_Layer: 6
@@ -1223,11 +1272,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 5
+  boostSpeed: 12
   canMove: 0
   minX: -20
   maxX: 20
   minY: -11
   maxY: 10.5
+  isBoosting: 0
 --- !u!50 &631644381
 Rigidbody2D:
   serializedVersion: 4
@@ -1686,7 +1737,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 1832248328}
-  timeRemaining: 90
+  timeRemaining: 121
   timesUpText: {fileID: 1494632365}
 --- !u!1 &854290327
 GameObject:
@@ -1731,8 +1782,8 @@ GameObject:
   - component: {fileID: 1026874629}
   - component: {fileID: 1026874626}
   - component: {fileID: 1026874631}
-  - component: {fileID: 1026874632}
   - component: {fileID: 1026874634}
+  - component: {fileID: 1026874632}
   - component: {fileID: 1026874628}
   - component: {fileID: 1026874636}
   m_Layer: 6
@@ -1798,11 +1849,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 5
+  boostSpeed: 12
   canMove: 0
   minX: -20
   maxX: 20
   minY: -11
   maxY: 10.5
+  isBoosting: 0
 --- !u!61 &1026874629
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3231,7 +3284,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 0.7830189, g: 0.7830189, b: 0.7830189, a: 1}
+  m_Color: {r: 0.8745099, g: 0.95294124, b: 0.9294118, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
