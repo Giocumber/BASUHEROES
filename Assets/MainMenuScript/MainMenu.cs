@@ -5,12 +5,16 @@ using UnityEngine;
 public class MainMenu : MonoBehaviour
 {
     public GameObject quitPanel;
+    GameManager gameManager;
+
+    private void Start()
+    {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+    }
 
     public void startButton()
     {
-        GameObject gameObject = GameObject.Find("gm");
-        GameManager gm = gameObject.GetComponent<GameManager>();
-        gm.Play();
+        gameManager.Play();
     }
 
     public void quitButton()
@@ -20,9 +24,7 @@ public class MainMenu : MonoBehaviour
 
     public void quitConfirm()
     {
-        GameObject gameObject = GameObject.Find("gm");
-        GameManager gm = gameObject.GetComponent<GameManager>();
-        gm.Quit();
+        gameManager.Quit();
     }
 
     public void noQuit()
