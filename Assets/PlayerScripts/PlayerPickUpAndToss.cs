@@ -40,6 +40,7 @@ public class PlayerPickUpAndToss : MonoBehaviour
         if (objectToPickUp != null && carryObjectPosition.childCount == 0)
         {
             Rigidbody2D objectRb = objectToPickUp.GetComponent<Rigidbody2D>();
+            objectRb.constraints = RigidbodyConstraints2D.FreezeAll;
             objectRb.isKinematic = true; // Set it to kinematic so the object is stable
 
             objectToPickUp.transform.SetParent(carryObjectPosition); // Set object as child of carry position
@@ -54,9 +55,12 @@ public class PlayerPickUpAndToss : MonoBehaviour
             Transform objectToToss = carryObjectPosition.GetChild(0);
             objectToToss.SetParent(null); // Unparent the object so it no longer moves with the player
 
+            Rigidbody2D objectRb = objectToToss.GetComponent<Rigidbody2D>();
+            objectRb.constraints = RigidbodyConstraints2D.FreezeRotation;
+
             Vector2 throwDirection = new Vector2(transform.localScale.x, 0).normalized; // Adjust direction based on player facing
 
-            Rigidbody2D objectRb = objectToToss.GetComponent<Rigidbody2D>();
+            
             objectRb.isKinematic = false; // Set to dynamic for physics to take effect
             objectRb.AddForce(throwDirection * tossForce, ForceMode2D.Impulse); // Toss the object with force
 
