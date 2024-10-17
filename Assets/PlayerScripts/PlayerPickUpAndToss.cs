@@ -67,23 +67,14 @@ public class PlayerPickUpAndToss : MonoBehaviour
 
     private IEnumerator SimulateGravity(Rigidbody2D objectRb)
     {
-        float gravityDuration = 0.5f; // Duration for which the object will be affected by "gravity"
-        float elapsedTime = 0f;
+        objectRb.gravityScale = 3f;
+        yield return new WaitForSeconds(0.5f);
 
-        // Apply a continuous downward force for a limited time to simulate gravity
-        while (elapsedTime < gravityDuration)
-        {
-            objectRb.AddForce(Vector2.down * 30f); // Adjust the strength to simulate gravity
-            elapsedTime += Time.fixedDeltaTime; // Increment the elapsed time
-            yield return new WaitForFixedUpdate();
-        }
+        objectRb.gravityScale = 0f;
 
-        objectRb.velocity = Vector2.zero; //Stops the object from moving
-
-        // After the gravity effect, set the object to kinematic
-        objectRb.isKinematic = true;
+        //Stops the object from moving
+        objectRb.velocity = Vector2.zero;
         objectRb.position = new Vector2(objectRb.position.x, objectRb.position.y);
-
     }
 
     private void OnTriggerStay2D(Collider2D other)
