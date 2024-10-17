@@ -10,6 +10,7 @@ TagManager:
   - Hazardous
   - PackedTrash
   - Trash
+  - Boost
   layers:
   - Default
   - TransparentFX
