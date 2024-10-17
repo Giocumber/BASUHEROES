@@ -8,12 +8,13 @@ public class UnpackingStationScript : MonoBehaviour
     private float unpackTimer = 0f;
     public float unpackTimerComplete = 3f;
 
-    public int trashToRelease; // Number of trash objects to release
+    public int minTrashToRelease; 
+    public int maxTrashToRelease;
     private GameObject trashSpawnPoint; 
     public GameObject[] trashPrefab; // The trash prefab to instantiate
 
-    private bool playerInTrigger = false;
-    private bool trashInTrigger = false;
+    public bool playerInTrigger = false;
+    public bool trashInTrigger = false;
     private GameObject trashObject;
 
     private void Start()
@@ -70,7 +71,7 @@ public class UnpackingStationScript : MonoBehaviour
     private void UnpackTrash(GameObject trash)
     {
         Destroy(trash); // Remove the original trash object
-        ReleaseTrash(trashToRelease);
+        ReleaseTrash(Random.Range(minTrashToRelease, maxTrashToRelease));
     }
 
     private void ReleaseTrash(int numOfTrash)
