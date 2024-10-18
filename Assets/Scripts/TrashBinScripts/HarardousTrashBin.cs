@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class HarardousTrashBin : MonoBehaviour
 {
+    public TrashCounter scoreDisplay;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Hazardous"))
         {
             Destroy(collision.gameObject);
+            scoreDisplay.TrashCountAdd();
         }
     }
 }

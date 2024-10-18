@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class BiodegradableTrashBin : MonoBehaviour
 {
+    public TrashCounter scoreDisplay;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Biodegradable"))
         {
             Destroy(collision.gameObject);
+            scoreDisplay.TrashCountAdd();
         }
     }
 }
