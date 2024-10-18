@@ -6,6 +6,16 @@ public class BoostPowerUpScript : MonoBehaviour
 {
     public float boostPowerDuration;
 
+    private void Start()
+    {
+        Invoke("DestroyObject", 5f);    
+    }
+
+    void DestroyObject()
+    {
+        Destroy(gameObject);
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
