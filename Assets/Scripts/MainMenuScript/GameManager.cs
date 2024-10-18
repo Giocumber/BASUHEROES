@@ -19,4 +19,16 @@ public class GameManager : MonoBehaviour
         Debug.Log("Quit na");
         Application.Quit();
     }
+
+    public void Retry()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+
 }
