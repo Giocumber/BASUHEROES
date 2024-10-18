@@ -6,6 +6,7 @@ using TMPro;
 public class TrashCounter : MonoBehaviour
 {
     private int quota = 30;
+    private int winQuota;
     public int trashCount = 0;
     public TextMeshProUGUI scoreHold;
     public TextMeshProUGUI quotaHold;
@@ -14,7 +15,7 @@ public class TrashCounter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        winQuota = quota;
     }
 
     // Update is called once per frame
@@ -29,10 +30,10 @@ public class TrashCounter : MonoBehaviour
         quota--;
 
         if(quota > 1)
-        {
             quotaHold.text = $"QUOTA: {quota}";
+
+        if(trashCount >= winQuota)
             winText.SetActive(true);
-        }
 
         scoreHold.text = $"DISPOSED: {trashCount}";
     }
