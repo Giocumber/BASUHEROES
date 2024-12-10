@@ -5,7 +5,7 @@ using TMPro;
 
 public class TrashCounter : MonoBehaviour
 {
-    private int quota = 30;
+    public int quota = 30;
     private int winQuota;
     public int trashCount = 0;
     public TextMeshProUGUI scoreHold;
@@ -29,11 +29,14 @@ public class TrashCounter : MonoBehaviour
         trashCount++;
         quota--;
 
-        if(quota > 1)
+        if(quota > 0)
             quotaHold.text = $"QUOTA: {quota}";
 
         if(trashCount >= winQuota)
+        {
             winText.SetActive(true);
+            quotaHold.text = $"QUOTA: 0";
+        }
 
         scoreHold.text = $"DISPOSED: {trashCount}";
     }
