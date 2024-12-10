@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     Rigidbody2D rb;
-    private Vector2 movementInput;
+    public Vector2 movementInput;
 
     public float movementSpeed = 5f;
     public float boostSpeed;
@@ -15,14 +15,11 @@ public class PlayerMovement : MonoBehaviour
     public bool canMove;
     public float minX, maxX, minY, maxY; // Define boundaries for X and Y axes
 
-    //private PlayerFlip playerFlip;
-
     public bool isBoosting;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        //playerFlip = GetComponent<PlayerFlip>();
         canMove = true;
         isBoosting = false;
         originalSpeed = movementSpeed;
