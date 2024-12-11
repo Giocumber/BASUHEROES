@@ -7,14 +7,17 @@ public class PlayerPickUpAndToss : MonoBehaviour
 {
     private Transform carryObjectPosition; // Position where the object will be carried
     private GameObject objectToPickUp;
+    public bool isCarryingObject;
 
     public string[] canCarryObjectTags; // Tags of objects the player can carry (editable in Inspector)
     public float tossForce = 5f; // Force applied when tossing
 
     private string getObjectLayer;
 
+
     private void Start()
     {
+        isCarryingObject = false;
         objectToPickUp = null;
         carryObjectPosition = transform.Find("CarryPosition"); // Finds the child object CarryPosition
     }
@@ -41,6 +44,8 @@ public class PlayerPickUpAndToss : MonoBehaviour
     {
         if (objectToPickUp != null && carryObjectPosition.childCount == 0)
         {
+            isCarryingObject = true;
+
             Rigidbody2D objectRb = objectToPickUp.GetComponent<Rigidbody2D>();
             objectRb.constraints = RigidbodyConstraints2D.FreezeAll;
             objectRb.isKinematic = true; // Set it to kinematic so the object is stable
@@ -68,6 +73,8 @@ public class PlayerPickUpAndToss : MonoBehaviour
             objectRb.AddForce(throwDirection * tossForce, ForceMode2D.Impulse); // Toss the object with force
             objectToToss.gameObject.layer = LayerMask.NameToLayer(getObjectLayer);
 
+
+            isCarryingObject = false;
             // Simulate gravity after tossing
             StartCoroutine(SimulateGravity(objectRb));
         }
