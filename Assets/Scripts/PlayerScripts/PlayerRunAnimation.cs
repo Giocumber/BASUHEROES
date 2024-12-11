@@ -20,14 +20,14 @@ public class PlayerRunAnimation : MonoBehaviour
         // idle anim and not carrying object
         if (playerMovement.movementInput.x == 0 && !playerPickUpAndToss.isCarryingObject)
         {
-            runAnimator.SetBool("isRunningX", false);
+            runAnimator.SetBool("isRunningSideward", false);
             runAnimator.SetBool("isCarryingObject", false);
         }
 
         // side run anim and not carrying object
         if (playerMovement.movementInput.x != 0 && !playerPickUpAndToss.isCarryingObject)
         {
-            runAnimator.SetBool("isRunningX", true);
+            runAnimator.SetBool("isRunningSideward", true);
             runAnimator.SetBool("isCarryingObject", false);
         }
 

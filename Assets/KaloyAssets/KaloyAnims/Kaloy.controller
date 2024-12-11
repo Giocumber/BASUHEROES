@@ -134,7 +134,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: isRunningX
+    m_ConditionEvent: isRunningSideward
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -178493917048355333}
@@ -277,7 +277,7 @@ AnimatorStateMachine:
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: -560, y: 380, z: 0}
   m_EntryPosition: {x: -490, y: 130, z: 0}
-  m_ExitPosition: {x: 1210, y: 520, z: 0}
+  m_ExitPosition: {x: -560, y: 460, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: -581006267990463216}
 --- !u!1101 &-3473364784052728856
@@ -557,7 +557,7 @@ AnimatorController:
   m_Name: Kaloy
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: isRunningX
+  - m_Name: isRunningSideward
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -986,7 +986,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: isRunningX
+    m_ConditionEvent: isRunningSideward
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -497177475075385714}
@@ -1171,7 +1171,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: isRunningX
+    m_ConditionEvent: isRunningSideward
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -497177475075385714}
@@ -1196,7 +1196,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: isRunningX
+    m_ConditionEvent: isRunningSideward
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -497177475075385714}
