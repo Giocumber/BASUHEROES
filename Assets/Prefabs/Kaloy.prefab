@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3931343756639681750}
   - component: {fileID: 3931343756639681710}
+  - component: {fileID: 3931343756639681705}
   - component: {fileID: 3931343756639681744}
   - component: {fileID: 3931343756639681745}
   - component: {fileID: 3931343756639681747}
@@ -19,7 +20,6 @@ GameObject:
   - component: {fileID: 3931343756639681707}
   - component: {fileID: 3931343756639681746}
   - component: {fileID: 3931343756639681704}
-  - component: {fileID: 3931343756639681705}
   m_Layer: 0
   m_Name: Kaloy
   m_TagString: Player
@@ -93,6 +93,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &3931343756639681705
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3931343756639681751}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9c9a066b32d55b74982b13f063ee7339, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!50 &3931343756639681744
 Rigidbody2D:
   serializedVersion: 4
@@ -262,6 +281,7 @@ MonoBehaviour:
   - Biodegradable
   - NonBiodegradable
   tossForce: 1000
+  tossForceWhenRunning: 1800
 --- !u!114 &3931343756639681704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -274,25 +294,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e5aee732006e2140a7abe4b1e8ccb8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!95 &3931343756639681705
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3931343756639681751}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9c9a066b32d55b74982b13f063ee7339, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3931343757193138988
 GameObject:
   m_ObjectHideFlags: 0

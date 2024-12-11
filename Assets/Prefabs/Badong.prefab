@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2911387162937023166}
   - component: {fileID: 2911387162937023110}
+  - component: {fileID: 2911387162937023111}
   - component: {fileID: 2911387162937023160}
   - component: {fileID: 2911387162937023163}
   - component: {fileID: 2911387162937023167}
@@ -18,7 +19,6 @@ GameObject:
   - component: {fileID: 2911387162937023109}
   - component: {fileID: 2911387162937023161}
   - component: {fileID: 2911387162937023105}
-  - component: {fileID: 2911387162937023111}
   - component: {fileID: 2911387162937023104}
   m_Layer: 6
   m_Name: Badong
@@ -93,6 +93,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &2911387162937023111
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2911387162937023164}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e88cb8d88bc31bb4580ca650ba4895c6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!50 &2911387162937023160
 Rigidbody2D:
   serializedVersion: 4
@@ -262,25 +281,7 @@ MonoBehaviour:
   - Biodegradable
   - NonBiodegradable
   tossForce: 1000
---- !u!95 &2911387162937023111
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2911387162937023164}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e88cb8d88bc31bb4580ca650ba4895c6, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  tossForceWhenRunning: 1800
 --- !u!114 &2911387162937023104
 MonoBehaviour:
   m_ObjectHideFlags: 0

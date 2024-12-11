@@ -2701,6 +2701,7 @@ MonoBehaviour:
   - Biodegradable
   - NonBiodegradable
   tossForce: 1000
+  tossForceWhenRunning: 5
 --- !u!1 &1033041647
 GameObject:
   m_ObjectHideFlags: 0
@@ -6484,6 +6485,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Badong
       objectReference: {fileID: 0}
+    - target: {fileID: 2911387162937023164, guid: a4c1336348a39fb49a141ed73f88645b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2911387162937023166, guid: a4c1336348a39fb49a141ed73f88645b, type: 3}
       propertyPath: m_RootOrder
       value: 18
@@ -6584,6 +6589,10 @@ PrefabInstance:
     - target: {fileID: 3931343756639681751, guid: 38e73302c3dfa33468a025fb8078e9c6, type: 3}
       propertyPath: m_Name
       value: Kaloy
+      objectReference: {fileID: 0}
+    - target: {fileID: 3931343756639681751, guid: 38e73302c3dfa33468a025fb8078e9c6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38e73302c3dfa33468a025fb8078e9c6, type: 3}

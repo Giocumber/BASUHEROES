@@ -8,18 +8,37 @@ public class PlayerPickUpAndToss : MonoBehaviour
     private Transform carryObjectPosition; // Position where the object will be carried
     private GameObject objectToPickUp;
     public bool isCarryingObject;
-
     public string[] canCarryObjectTags; // Tags of objects the player can carry (editable in Inspector)
+    private string objectLayerName;
+
     public float tossForce = 5f; // Force applied when tossing
+    public float tossForceWhenRunning = 5f; // Force applied when tossing
+    private float originalTossForce;
 
-    private string getObjectLayer;
-
+    private PlayerMovement playerMovement;
+    private Vector2 lastDirection;
 
     private void Start()
     {
+        originalTossForce = tossForce;
         isCarryingObject = false;
         objectToPickUp = null;
         carryObjectPosition = transform.Find("CarryPosition"); // Finds the child object CarryPosition
+        playerMovement = GetComponent<PlayerMovement>();
+    }
+
+    private void Update()
+    {
+        if (playerMovement.movementInput != Vector2.zero)
+        {
+            tossForce = tossForceWhenRunning;
+            lastDirection = playerMovement.movementInput.normalized; // Store normalized direction
+        }
+
+        if (playerMovement.movementInput == Vector2.zero)
+        {
+            tossForce = originalTossForce;
+        }
     }
 
     // Call this function when the pickup/toss button is pressed
@@ -52,8 +71,11 @@ public class PlayerPickUpAndToss : MonoBehaviour
 
             objectToPickUp.transform.SetParent(carryObjectPosition); // Set object as child of carry position
             objectToPickUp.transform.localPosition = Vector3.zero; // Center it in the carry position
-            getObjectLayer = LayerMask.LayerToName(objectToPickUp.layer);
-            objectToPickUp.layer = LayerMask.NameToLayer("CarriedTrash");
+            objectLayerName = LayerMask.LayerToName(objectToPickUp.layer); //get the default object layer name
+            objectToPickUp.layer = LayerMask.NameToLayer("CarriedTrash"); //change the layer name of the object for colliding purposes
+
+            BoxCollider2D[] objectToTossColliders = objectToPickUp.GetComponents<BoxCollider2D>();
+            DisableBoxCollider(objectToTossColliders);
         }
     }
 
@@ -67,16 +89,39 @@ public class PlayerPickUpAndToss : MonoBehaviour
             Rigidbody2D objectRb = objectToToss.GetComponent<Rigidbody2D>();
             objectRb.constraints = RigidbodyConstraints2D.FreezeRotation; // Unfreeze all except rotation
 
-            Vector2 throwDirection = new Vector2(transform.localScale.x, 0).normalized; // Adjust direction based on player facing
+            //Vector2 throwDirection = new Vector2(transform.localScale.x, 0).normalized; // Adjust direction based on player facing
+            Vector2 throwDirection = lastDirection;
 
             objectRb.isKinematic = false; // Set to dynamic for physics to take effect
             objectRb.AddForce(throwDirection * tossForce, ForceMode2D.Impulse); // Toss the object with force
-            objectToToss.gameObject.layer = LayerMask.NameToLayer(getObjectLayer);
-
+            objectToToss.gameObject.layer = LayerMask.NameToLayer(objectLayerName); //set the layer name to its default name for collider purposes
+            BoxCollider2D[] objectToTossColliders = objectToToss.GetComponents<BoxCollider2D>();
 
             isCarryingObject = false;
             // Simulate gravity after tossing
             StartCoroutine(SimulateGravity(objectRb));
+            StartCoroutine(EnableBoxColliders(objectToTossColliders));
+        }
+    }
+
+    private void DisableBoxCollider(BoxCollider2D[] objectToTossColliders) //avoid colliding to player when throwing the game obj
+    {
+        foreach (var collider in objectToTossColliders)
+        {
+            if (!collider.isTrigger)
+            {
+                collider.enabled = false;
+                break;
+            }
+        }
+    }
+
+    private IEnumerator EnableBoxColliders(BoxCollider2D[] objectToTossColliders)
+    {
+        yield return new WaitForSeconds(0.5f);
+        foreach (var collider in objectToTossColliders)
+        {
+            collider.enabled = true;
         }
     }
 
