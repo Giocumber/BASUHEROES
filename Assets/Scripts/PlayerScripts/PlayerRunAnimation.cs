@@ -68,11 +68,39 @@ public class PlayerRunAnimation : MonoBehaviour
             runAnimator.SetBool("isCarryingObjSideways", true);
         }
 
+        // idle front anim and carrying object
+        if (playerMovement.movementInput.y == 0 && playerPickUpAndToss.isCarryingObject)
+        {
+            runAnimator.SetBool("isCarryingDownward", false);
+            runAnimator.SetBool("isCarryingUpward", false);
+            runAnimator.SetBool("isCarryingObject", true);
+        }
+
+        // run downward anim and carrying object
+        if (playerMovement.movementInput.y < 0 && playerPickUpAndToss.isCarryingObject)
+        {
+            runAnimator.SetBool("isCarryingDownward", true);
+            runAnimator.SetBool("isCarryingObject", true);
+            runAnimator.SetBool("isCarryingUpward", false);
+        }
+
+        // run upward anim and carrying object
+        if (playerMovement.movementInput.y > 0 && playerPickUpAndToss.isCarryingObject)
+        {
+            runAnimator.SetBool("isCarryingUpward", true);
+            runAnimator.SetBool("isCarryingObject", true);
+            runAnimator.SetBool("isCarryingDownward", false);
+        }
+
+
+
         // not carrying object set all the carrying object anim to false
         if (!playerPickUpAndToss.isCarryingObject)
         {
             runAnimator.SetBool("isCarryingObject", false);
             runAnimator.SetBool("isCarryingObjSideways", false);
+            runAnimator.SetBool("isCarryingDownward", false);
+            runAnimator.SetBool("isCarryingUpward", false);
         }
     }
 
