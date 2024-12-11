@@ -40,5 +40,11 @@ public class PlayerRunAnimation : MonoBehaviour
             runAnimator.SetBool("isRunningDownward", true);
             runAnimator.SetBool("isRunningUpward", false);
         }
+
+        if(playerMovement.movementInput.y == 0)
+        {
+            runAnimator.SetBool("isRunningDownward", false); ;
+            runAnimator.SetBool("isRunningUpward", false);
+        }
     }
 }
