@@ -386,7 +386,6 @@ GameObject:
   - component: {fileID: 86707519}
   - component: {fileID: 86707525}
   - component: {fileID: 86707524}
-  - component: {fileID: 86707527}
   m_Layer: 0
   m_Name: Kaloy
   m_TagString: Player
@@ -658,18 +657,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1d87c369ab709374d96ca21270350437, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &86707527
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 86707514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 868267bf57ecce7448de7e87841c5d0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &89182745
@@ -2210,6 +2197,7 @@ GameObject:
   - component: {fileID: 631644380}
   - component: {fileID: 631644388}
   - component: {fileID: 631644386}
+  - component: {fileID: 631644389}
   m_Layer: 6
   m_Name: Badong
   m_TagString: Player
@@ -2234,7 +2222,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.5, y: 2.5}
+    oldSize: {x: 1.84, y: 2.26}
     newSize: {x: 1.84, y: 2.26}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2271,7 +2259,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementInput: {x: 0, y: 0}
-  movementSpeed: 5
+  movementSpeed: 7
   boostSpeed: 12
   canMove: 0
   minX: -20
@@ -2317,7 +2305,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.5, y: 2.5}
+    oldSize: {x: 1.84, y: 2.26}
     newSize: {x: 1.84, y: 2.26}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2471,6 +2459,18 @@ MonoBehaviour:
   - Biodegradable
   - NonBiodegradable
   tossForce: 1000
+--- !u!114 &631644389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631644377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e5aee732006e2140a7abe4b1e8ccb8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &647657262
 GameObject:
   m_ObjectHideFlags: 0
