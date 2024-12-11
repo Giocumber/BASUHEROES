@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 2b69588bcc052a9409dcc3a571da95b9
+guid: 00abb850223a558498846a8f7feda1d5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8419488397445451081
-    second: KaloyFrontRunningAnimSheet_0
+      213: -1646336048222733829
+    second: KaloyBackRunningAnimSheet_0
   - first:
-      213: 2476284266137978688
-    second: KaloyFrontRunningAnimSheet_1
+      213: 144512336840656030
+    second: KaloyBackRunningAnimSheet_1
   - first:
-      213: -6973679563111925519
-    second: KaloyFrontRunningAnimSheet_2
+      213: -1237169892337850370
+    second: KaloyBackRunningAnimSheet_2
   - first:
-      213: -1529267777823583787
-    second: KaloyFrontRunningAnimSheet_3
+      213: -2600334036510901276
+    second: KaloyBackRunningAnimSheet_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -103,7 +103,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: KaloyFrontRunningAnimSheet_0
+      name: KaloyBackRunningAnimSheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -117,14 +117,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94d4240d61808d470800000000000000
-      internalID: 8419488397445451081
+      spriteID: bf973c8361a0729e0800000000000000
+      internalID: -1646336048222733829
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KaloyFrontRunningAnimSheet_1
+      name: KaloyBackRunningAnimSheet_1
       rect:
         serializedVersion: 2
         x: 250
@@ -138,14 +138,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0470b0e8b678d5220800000000000000
-      internalID: 2476284266137978688
+      spriteID: e948c076439610200800000000000000
+      internalID: 144512336840656030
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KaloyFrontRunningAnimSheet_2
+      name: KaloyBackRunningAnimSheet_2
       rect:
         serializedVersion: 2
         x: 500
@@ -159,14 +159,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f8ff4fa263883f90800000000000000
-      internalID: -6973679563111925519
+      spriteID: ef7e468a980b4dee0800000000000000
+      internalID: -1237169892337850370
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KaloyFrontRunningAnimSheet_3
+      name: KaloyBackRunningAnimSheet_3
       rect:
         serializedVersion: 2
         x: 750
@@ -180,8 +180,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d1df58fe03f6cae0800000000000000
-      internalID: -1529267777823583787
+      spriteID: 4ebf86098f1c9ebd0800000000000000
+      internalID: -2600334036510901276
       vertices: []
       indices: 
       edges: []
