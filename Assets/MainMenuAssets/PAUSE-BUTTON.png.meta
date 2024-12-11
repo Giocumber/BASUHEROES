@@ -1,0 +1,732 @@
+fileFormatVersion: 2
+guid: 4d22d87a037ea8e41856aada7404f366
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4165729490069334714
+    second: PAUSE-BUTTON_0
+  - first:
+      213: 4613556980949285601
+    second: PAUSE-BUTTON_1
+  - first:
+      213: 4862752659249741413
+    second: PAUSE-BUTTON_2
+  - first:
+      213: 8024360926134920691
+    second: PAUSE-BUTTON_3
+  - first:
+      213: -82192976550181513
+    second: PAUSE-BUTTON_4
+  - first:
+      213: 3878827565315168920
+    second: PAUSE-BUTTON_5
+  - first:
+      213: 2635087943913343123
+    second: PAUSE-BUTTON_6
+  - first:
+      213: -4967266287292168495
+    second: PAUSE-BUTTON_7
+  - first:
+      213: 8302794405437752116
+    second: PAUSE-BUTTON_8
+  - first:
+      213: -4540895602511783455
+    second: PAUSE-BUTTON_9
+  - first:
+      213: -3454280048266790929
+    second: PAUSE-BUTTON_10
+  - first:
+      213: 7713061655371050822
+    second: PAUSE-BUTTON_11
+  - first:
+      213: 4773181648445733046
+    second: PAUSE-BUTTON_12
+  - first:
+      213: 6117248452752371267
+    second: PAUSE-BUTTON_13
+  - first:
+      213: -8633308407643681827
+    second: PAUSE-BUTTON_14
+  - first:
+      213: -5516255938999054003
+    second: PAUSE-BUTTON_15
+  - first:
+      213: 8626234312073441912
+    second: PAUSE-BUTTON_16
+  - first:
+      213: 8592369563488586026
+    second: PAUSE-BUTTON_17
+  - first:
+      213: 7159905923464299997
+    second: PAUSE-BUTTON_18
+  - first:
+      213: -7944207991646149346
+    second: PAUSE-BUTTON_19
+  - first:
+      213: 5242577951454497597
+    second: PAUSE-BUTTON_20
+  - first:
+      213: -2945336377968538192
+    second: PAUSE-BUTTON_21
+  - first:
+      213: -7687478628170413990
+    second: PAUSE-BUTTON_22
+  - first:
+      213: 4940785746260951672
+    second: PAUSE-BUTTON_23
+  - first:
+      213: -594972597557835298
+    second: PAUSE-BUTTON_24
+  - first:
+      213: 8876270941816396699
+    second: PAUSE-BUTTON_25
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PAUSE-BUTTON_0
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 817
+        width: 44
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abaa3f576e4afc930800000000000000
+      internalID: 4165729490069334714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PAUSE-BUTTON_1
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 817
+        width: 40
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ea718861a5a60040800000000000000
+      internalID: 4613556980949285601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PAUSE-BUTTON_2
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 816
+        width: 40
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56eba2597c7fb7340800000000000000
+      internalID: 4862752659249741413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PAUSE-BUTTON_3
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 817
+        width: 51
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f5ebc75fb14c5f60800000000000000
+      internalID: 8024360926134920691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PAUSE-BUTTON_4
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 817
+        width: 65
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 775c1bd5cedfbdef0800000000000000
+      internalID: -82192976550181513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PAUSE-BUTTON_5
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 817
+        width: 40
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89a9a97ae1d54d530800000000000000
+      internalID: 3878827565315168920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PAUSE-BUTTON_6
+      rect:
+        serializedVersion: 2
+        x: 829
+        y: 817
+        width: 44
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3988ed01686b19420800000000000000
+      internalID: 2635087943913343123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PAUSE-BUTTON_7
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 817
+        width: 40
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d64d2121a9b01bb0800000000000000
+      internalID: -4967266287292168495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PAUSE-BUTTON_8
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 816
+        width: 40
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 433c73b8583793370800000000000000
+      internalID: 8302794405437752116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PAUSE-BUTTON_9
+      rect:
+        serializedVersion: 2
+        x: 959
+        y: 817
+        width: 48
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e9d62a128f7bf0c0800000000000000
+      internalID: -4540895602511783455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PAUSE-BUTTON_10
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 817
+        width: 52
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe7b650099eef00d0800000000000000
+      internalID: -3454280048266790929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PAUSE-BUTTON_11
+      rect:
+        serializedVersion: 2
+        x: 1058
+        y: 817
+        width: 44
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64fe313c5bc4a0b60800000000000000
+      internalID: 7713061655371050822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PAUSE-BUTTON_12
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 817
+        width: 48
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b8750c7b6fbd3240800000000000000
+      internalID: 4773181648445733046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PAUSE-BUTTON_13
+      rect:
+        serializedVersion: 2
+        x: 1508
+        y: 817
+        width: 40
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34eec15ae05d4e450800000000000000
+      internalID: 6117248452752371267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PAUSE-BUTTON_14
+      rect:
+        serializedVersion: 2
+        x: 1550
+        y: 816
+        width: 55
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddb41069eb3503880800000000000000
+      internalID: -8633308407643681827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PAUSE-BUTTON_15
+      rect:
+        serializedVersion: 2
+        x: 1607
+        y: 817
+        width: 23
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4192d923725273b0800000000000000
+      internalID: -5516255938999054003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PAUSE-BUTTON_16
+      rect:
+        serializedVersion: 2
+        x: 1633
+        y: 817
+        width: 48
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8727c60376a86b770800000000000000
+      internalID: 8626234312073441912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PAUSE-BUTTON_17
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 612
+        width: 572
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a298d9af79a3e3770800000000000000
+      internalID: 8592369563488586026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PAUSE-BUTTON_18
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 612
+        width: 572
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd50e49a0881d5360800000000000000
+      internalID: 7159905923464299997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PAUSE-BUTTON_19
+      rect:
+        serializedVersion: 2
+        x: 1308
+        y: 612
+        width: 572
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e15ac1cfbe080c190800000000000000
+      internalID: -7944207991646149346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PAUSE-BUTTON_20
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 443
+        width: 572
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3b8db7ded061c840800000000000000
+      internalID: 5242577951454497597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PAUSE-BUTTON_21
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 443
+        width: 572
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bd46275b201027d0800000000000000
+      internalID: -2945336377968538192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PAUSE-BUTTON_22
+      rect:
+        serializedVersion: 2
+        x: 1307
+        y: 443
+        width: 572
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a58ce7deae6905590800000000000000
+      internalID: -7687478628170413990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PAUSE-BUTTON_23
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 817
+        width: 290
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87282357572319440800000000000000
+      internalID: 4940785746260951672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PAUSE-BUTTON_24
+      rect:
+        serializedVersion: 2
+        x: 829
+        y: 817
+        width: 323
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed94977239b3eb7f0800000000000000
+      internalID: -594972597557835298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PAUSE-BUTTON_25
+      rect:
+        serializedVersion: 2
+        x: 1508
+        y: 817
+        width: 173
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9b9611a469de2b70800000000000000
+      internalID: 8876270941816396699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
