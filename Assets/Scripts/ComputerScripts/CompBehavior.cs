@@ -8,7 +8,7 @@ public class CompBehavior : MonoBehaviour
     public GameObject pcOn;
     public float interval = 8f;
     public float holdInterval = 8f;
-    public bool isOn;
+    public bool isOn = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +19,7 @@ public class CompBehavior : MonoBehaviour
     void Update()
     {
         interval -= Time.deltaTime;
-        if (!isOn && interval == 0)
+        if (!isOn && interval <= 0)
         {
             Behaviour();
         }
@@ -30,7 +30,6 @@ public class CompBehavior : MonoBehaviour
         pcOn.SetActive(true);
         pcOff.SetActive(false);
         interval = holdInterval;
-        
     }
 
     public void ConditionImplement()
