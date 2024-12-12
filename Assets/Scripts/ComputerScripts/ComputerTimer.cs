@@ -24,13 +24,10 @@ public class ComputerTimer : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D colli)
     {
-        //if (colli.gameObject.CompareTag("Player"))
-        //{
-            
-        //}
-
-        bar.StopTimer();
-        cb.ConditionImplement();
-
+        if (colli.gameObject.CompareTag("Player"))
+        {
+            bar.StopTimer();
+            cb.ConditionImplement();
+        }
     }
 }
