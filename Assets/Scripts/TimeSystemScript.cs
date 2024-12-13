@@ -7,9 +7,15 @@ public class TimeSystemScript : MonoBehaviour
 {
     public TextMeshProUGUI timerText;  // Assign your TextMeshPro UI element in the Inspector
     public float timeRemaining = 60f;  // The starting time in seconds
-    private bool isCountingDown = true;
+    private bool isCountingDown;
 
     public GameObject timesUpText;
+
+    private void Start()
+    {
+        UpdateTimerUI(timeRemaining);
+        isCountingDown = false;
+    }
 
     void Update()
     {
@@ -25,6 +31,11 @@ public class TimeSystemScript : MonoBehaviour
             isCountingDown = false;  // Stop the countdown
             TimerEnded();
         }
+    }
+
+    public void StartTimer()
+    {
+        isCountingDown = true;
     }
 
     void UpdateTimerUI(float currentTime)

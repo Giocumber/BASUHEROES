@@ -51,3 +51,6 @@ TagManager:
   - name: Player
     uniqueID: 922775243
     locked: 0
+  - name: Trash
+    uniqueID: 255501781
+    locked: 0

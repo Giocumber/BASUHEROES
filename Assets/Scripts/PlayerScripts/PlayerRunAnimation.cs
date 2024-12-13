@@ -97,14 +97,19 @@ public class PlayerRunAnimation : MonoBehaviour
         // not carrying object set all the carrying object anim to false
         if (!playerPickUpAndToss.isCarryingObject)
         {
-            runAnimator.SetBool("isCarryingObject", false);
-            runAnimator.SetBool("isCarryingObjSideways", false);
-            runAnimator.SetBool("isCarryingDownward", false);
-            runAnimator.SetBool("isCarryingUpward", false);
+            SetNotCarryingObject();
         }
+
+
     }
 
-
+    private void SetNotCarryingObject()
+    {
+        runAnimator.SetBool("isCarryingObject", false);
+        runAnimator.SetBool("isCarryingObjSideways", false);
+        runAnimator.SetBool("isCarryingDownward", false);
+        runAnimator.SetBool("isCarryingUpward", false);
+    }
 
 
 }

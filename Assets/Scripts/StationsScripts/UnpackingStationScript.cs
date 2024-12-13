@@ -10,31 +10,38 @@ public class UnpackingStationScript : MonoBehaviour
 
     public int minTrashToRelease; 
     public int maxTrashToRelease;
-    private GameObject trashSpawnPoint; 
+    public GameObject trashSpawnPoint; 
     public GameObject[] trashPrefab; // The trash prefab to instantiate
 
-    public bool playerInTrigger = false;
-    public bool trashInTrigger = false;
+    public bool playerInUnpacking = false;
+    public bool trashInUnpacking = false;
     private GameObject trashObject;
 
     private void Start()
     {
         trashObject = null;
-        trashSpawnPoint = GameObject.Find("SortingHub");
+    }
+
+    private void Update()
+    {
+        if(playerInUnpacking && trashInUnpacking)
+        {
+
+        }
     }
 
     private void OnTriggerStay2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
-            playerInTrigger = true;
+            playerInUnpacking = true;
 
         if (IsTrash(other))
         {
-            trashInTrigger = true;
+            trashInUnpacking = true;
             trashObject = other.gameObject; // Store reference to the trash object
         }
 
-        if (playerInTrigger && trashInTrigger)
+        if (playerInUnpacking && trashInUnpacking)
         {
             unpackTimer += Time.deltaTime; // Increase the timer
 
@@ -50,14 +57,14 @@ public class UnpackingStationScript : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            playerInTrigger = false;
-            trashInTrigger = false;
+            playerInUnpacking = false;
+            trashInUnpacking = false;
             unpackTimer = 0f; // Reset the timer after unpacking
         }
 
         if (IsTrash(other))
         {
-            trashInTrigger = false;
+            trashInUnpacking = false;
             trashObject = null; // Clear the reference to the trash object
         }
     }
