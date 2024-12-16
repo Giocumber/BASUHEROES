@@ -61,6 +61,6 @@ public class HP_BarScript : MonoBehaviour
 
     public void ZeroHealthBar()
     {
-        Debug.Log("ubos na boss");
+
     }
 }
