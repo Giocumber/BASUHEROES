@@ -114,8 +114,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.605}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 0, y: 0.6}
+  m_SizeDelta: {x: 2, y: 0.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &4339833261669702293
 Canvas:
@@ -446,8 +446,9 @@ MonoBehaviour:
   openPC: {fileID: 4557241850696699654}
   closePC: {fileID: 4557241850282767603}
   HP_Bar: {fileID: 2266913888485945656}
-  minTimeToOpen: 5
-  maxTimeToOpen: 10
+  OnPcVFX: {fileID: 2492903959327906442, guid: 337f18fb44c8b074fadada4c9bece313, type: 3}
+  minTimeToOpen: 10
+  maxTimeToOpen: 25
 --- !u!1 &4557241850282767603
 GameObject:
   m_ObjectHideFlags: 0

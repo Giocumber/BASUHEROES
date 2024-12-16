@@ -7,6 +7,8 @@ public class PC_Script : MonoBehaviour
     public GameObject openPC;
     public GameObject closePC;
     public GameObject HP_Bar;
+    public GameObject OnPcVFX;
+
     public float minTimeToOpen;
     public float maxTimeToOpen;
 
@@ -50,6 +52,7 @@ public class PC_Script : MonoBehaviour
         closePC.SetActive(true);
         isPCOpen = false;
         HP_Bar.SetActive(false);
+        ShowVFX();
 
         StartCoroutine(EnablePC());
     }
@@ -60,5 +63,12 @@ public class PC_Script : MonoBehaviour
         closePC.SetActive(false);
         isPCOpen = true;
         HP_Bar.SetActive(true);
+    }
+
+    private void ShowVFX()
+    {
+        Vector2 vfxPosition = new Vector2(transform.position.x, transform.position.y + 0.2f);
+
+        Instantiate(OnPcVFX, vfxPosition, OnPcVFX.transform.rotation);
     }
 }
