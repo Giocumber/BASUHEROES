@@ -433,5 +433,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 5043812004971063552}
-  timeRemaining: 150
+  timeRemaining: 180
   timesUpText: {fileID: 5043812005170186917}

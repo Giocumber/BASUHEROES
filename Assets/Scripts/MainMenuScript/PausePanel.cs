@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PausePanel : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class PausePanel : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        buttonManager = GameObject.Find("ButtonManager").GetComponent<GameManager>();
+        //buttonManager = GameObject.Find("ButtonManager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -34,15 +35,15 @@ public class PausePanel : MonoBehaviour
         Time.timeScale = 0;
     }
 
-    public void RetryButton()
+    public void RestartButton()
     {
         Time.timeScale = 1;
-        buttonManager.Retry();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void MainMenuButton()
     {
         Time.timeScale = 1;
-        buttonManager.MainMenu();
+        SceneManager.LoadScene(0);
     }
 }

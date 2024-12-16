@@ -6,6 +6,7 @@ public class PC_Script : MonoBehaviour
 {
     public GameObject openPC;
     public GameObject closePC;
+    public GameObject HP_Bar;
     public float minTimeToOpen;
     public float maxTimeToOpen;
 
@@ -15,13 +16,15 @@ public class PC_Script : MonoBehaviour
     {
         openPC.SetActive(false);
         closePC.SetActive(true);
+
         isPCOpen = false;
+
         StartCoroutine(EnablePC());
     }
 
     private void Update()
     {
-        if (!isPCOpen)
+        if (isPCOpen)
         {
 
         }
@@ -29,11 +32,11 @@ public class PC_Script : MonoBehaviour
  
     IEnumerator EnablePC()
     {
-        yield return new WaitForSeconds(Random.Range(minTimeToOpen, maxTimeToOpen));
+        yield return new WaitForSeconds(Random.Range(minTimeToOpen, maxTimeToOpen)); // randomize opening pc
         TurnOnPC();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision) // turn off pc when player collides
     {
         if (collision.CompareTag("Player") && isPCOpen)
         {
@@ -46,6 +49,7 @@ public class PC_Script : MonoBehaviour
         openPC.SetActive(false);
         closePC.SetActive(true);
         isPCOpen = false;
+        HP_Bar.SetActive(false);
 
         StartCoroutine(EnablePC());
     }
@@ -55,5 +59,6 @@ public class PC_Script : MonoBehaviour
         openPC.SetActive(true);
         closePC.SetActive(false);
         isPCOpen = true;
+        HP_Bar.SetActive(true);
     }
 }
